@@ -1,70 +1,136 @@
-/* Responsividade para dispositivos móveis */
 
-/* Telas menores que 768px (tablets e celulares em modo retrato) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-image: url('/src/img/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
+
+
+header {
+  background-color: rgba(51, 51, 51, 0.8);
+  color: #fff;
+  padding: 10px 20px;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+  color: #ff6600;
+  font-weight: 700;
+}
+
+/* Estilo do botão toggle */
+.menu-toggle {
+  display: none;
+  font-size: 1.5em;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  position: relative; 
+  z-index: 1001; 
+}
+
+/* Menu principal */
+header nav ul.menu {
+  display: flex;
+  justify-content: space-around;
+}
+
+
 @media (max-width: 768px) {
+  .menu-toggle {
+    display: block; 
+  }
 
-    /* Ajusta o cabeçalho */
-    header nav ul {
-      flex-direction: column; /* Coloca o menu em coluna */
-      text-align: center;
-    }
-  
-    header nav ul li {
-      margin-bottom: 10px;
-    }
-  
-    /* Ajusta o conteúdo principal */
-    main {
-      padding: 15px;
-      max-width: 100%; /* Garante que o conteúdo ocupe toda a largura da tela */
-      margin: 0 auto;
-    }
-  
-    /* Reduz a imagem de apresentação para caber melhor em telas menores */
-    .presentation-image {
-      width: 100px;
-      margin-bottom: 15px;
-    }
-  
-    /* Ajusta o tamanho dos títulos e parágrafos */
-    h1, h2, h3 {
-      font-size: 1.5em; /* Reduz o tamanho dos títulos */
-    }
-  
-    p, li {
-      font-size: 1em; /* Reduz o tamanho do texto */
-    }
-  
-    /* Formulários */
-    form input[type="text"],
-    form input[type="email"],
-    form textarea {
-      width: 100%; /* Garante que os inputs ocupem toda a largura disponível */
-    }
+  /* Oculta o menu por padrão em telas pequenas */
+  header nav ul.menu {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(51, 51, 51, 0.9);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1000; 
   }
-  
-  /* Telas menores que 480px (celulares em modo retrato) */
-  @media (max-width: 480px) {
-  
-    /* Ajusta ainda mais o tamanho da imagem de apresentação */
-    .presentation-image {
-      width: 80px;
-    }
-  
-    /* Reduz o espaçamento para otimizar o layout em telas muito pequenas */
-    main {
-      padding: 10px;
-    }
-  
-    /* Ajusta os botões para caber melhor em telas pequenas */
-    button, form button {
-      padding: 8px 15px;
-      font-size: 0.9em;
-    }
-  
-    /* Ajusta o rodapé para uma linha de texto menor */
-    footer p {
-      font-size: 0.8em;
-    }
+
+  header nav ul.menu.show {
+    display: flex;
   }
-  
+
+  header nav ul.menu li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .technology-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .presentation-image {
+    width: 100px;
+    margin-bottom: 15px;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.5em;
+  }
+
+  p, li {
+    font-size: 1em;
+  }
+
+  button, form button {
+    padding: 8px 15px;
+    font-size: 0.9em;
+  }
+
+  footer p {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  .technology-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .presentation-image {
+    width: 80px;
+  }
+
+  main {
+    padding: 10px;
+  }
+}

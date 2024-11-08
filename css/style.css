@@ -1,4 +1,4 @@
-/* Importa a fonte Roboto do Google Fonts */
+/* Importa a fonte Roboto */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 /* Reset básico */
@@ -8,23 +8,23 @@
   box-sizing: border-box;
 }
 
-/* Fundo com imagem para todas as páginas */
+/* Fundo da página */
 body {
-  background-image: url('/src/img/background.jpg'); /* Substitua pelo caminho da sua imagem */
-  background-size: cover; /* A imagem cobre toda a área da página */
-  background-position: center; /* Centraliza a imagem */
-  background-repeat: no-repeat; /* Evita repetição da imagem */
-  background-attachment: fixed; /* Fixa a imagem enquanto rola a página */
+  background-image: url('/src/img/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: 'Roboto', sans-serif; /* Define Roboto como fonte principal */
-  color: #fff; /* Ajuste para legibilidade sobre a imagem de fundo */
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
 }
 
-/* Estilo para o cabeçalho e navegação */
+/* Cabeçalho e navegação */
 header {
-  background-color: rgba(51, 51, 51, 0.8); /* Fundo semi-transparente para visibilidade sobre a imagem */
+  background-color: rgba(51, 51, 51, 0.8);
   color: #fff;
   padding: 10px 20px;
 }
@@ -48,18 +48,18 @@ header nav ul li a.active {
   font-weight: 700;
 }
 
-/* Estilos para o conteúdo principal */
+/* Conteúdo principal */
 main {
   flex: 1;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.9); /* Fundo claro e semi-transparente */
+  background-color: rgba(255, 255, 255, 0.9);
   color: #333;
   border-radius: 8px;
   max-width: 1000px;
   margin: 20px auto;
 }
 
-/* Estilo para a seção de apresentação */
+/* Seção de apresentação */
 .presentation {
   display: flex;
   flex-direction: column;
@@ -68,16 +68,16 @@ main {
   padding: 20px;
 }
 
-/* Estilo para a imagem de apresentação */
+/* Imagem de apresentação */
 .presentation-image {
-  width: 150px; /* Ajuste o tamanho conforme necessário */
+  width: 150px;
   height: auto;
-  border-radius: 50%; /* Deixa a imagem circular */
-  margin-bottom: 20px; /* Espaço abaixo da imagem */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra sutil */
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo para os títulos */
+/* Títulos */
 h1, h2, h3 {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
@@ -85,7 +85,7 @@ h1, h2, h3 {
   color: #333;
 }
 
-/* Estilo para parágrafos e listas */
+/* Parágrafos e listas */
 p, li {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -110,9 +110,9 @@ button:hover {
   background-color: #cc5200;
 }
 
-/* Estilos do rodapé */
+/* Rodapé */
 footer {
-  background-color: rgba(51, 51, 51, 0.8); /* Fundo semi-transparente */
+  background-color: rgba(51, 51, 51, 0.8);
   color: #fff;
   text-align: center;
   padding: 10px 20px;
@@ -168,71 +168,66 @@ form button:hover {
   background-color: #cc5200;
 }
 
-/* Estilo para a seção de tecnologias */
+/* Grid de tecnologias */
+.technology-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Caixa de tecnologia */
 .technology {
-  background-color: rgba(255, 255, 255, 0.9); /* Fundo claro */
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 15px;
   margin: 15px 0;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo para o título de cada tecnologia */
+/* Título de cada tecnologia */
 .technology h2 {
   font-weight: 700;
   color: #333;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
-/* Estilo para a descrição de cada tecnologia */
-.technology p {
-  color: #666;
-  line-height: 1.6;
+/* Ocultar descrições das tecnologias */
+.hidden {
+  display: none;
 }
 
-/* Responsividade para dispositivos móveis */
-@media (max-width: 768px) {
-  header nav ul {
-    flex-direction: column;
-  }
-
-  header nav ul li {
-    margin-bottom: 10px;
-  }
-
-  main {
-    padding: 15px;
-  }
-
-  .presentation-image {
-    width: 100px;
-    margin-bottom: 15px;
-  }
-
-  h1, h2, h3 {
-    font-size: 1.5em;
-  }
-
-  p, li {
-    font-size: 1em;
-  }
-
-  button, form button {
-    padding: 8px 15px;
-    font-size: 0.9em;
-  }
-
-  footer p {
-    font-size: 0.8em;
-  }
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
-@media (max-width: 480px) {
-  .presentation-image {
-    width: 80px;
-  }
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+  color: #333;
+}
 
-  main {
-    padding: 10px;
-  }
+.close {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 1.5em;
+  color: #333;
 }

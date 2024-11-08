@@ -11,7 +11,8 @@
 <body>
   <header>
     <nav>
-      <ul>
+      <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+      <ul class="menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">Sobre</a></li>
         <li><a href="education.html">Formação</a></li>
@@ -26,72 +27,84 @@
   <main>
     <h1>Tecnologias</h1>
 
-    <section class="technology">
-      <h2>Git</h2>
-      <p>Git é um sistema de controle de versão distribuído, essencial para o desenvolvimento colaborativo de software, permitindo o rastreamento de mudanças no código.</p>
-    </section>
-
-    <section class="technology">
-      <h2>Node.js</h2>
-      <p>Node.js é uma plataforma que permite executar JavaScript no lado do servidor, facilitando a construção de aplicações web escaláveis e rápidas.</p>
-    </section>
-
-    <section class="technology">
-      <h2>React</h2>
-      <p>React é uma biblioteca JavaScript para a criação de interfaces de usuário, amplamente utilizada no desenvolvimento front-end para construir interfaces interativas e dinâmicas.</p>
-    </section>
-
-    <section class="technology">
-      <h2>HTML & CSS</h2>
-      <p>HTML é a linguagem de marcação para estruturar o conteúdo da web, enquanto CSS é usado para estilizar e definir o layout visual das páginas.</p>
-    </section>
-
-    <section class="technology">
-      <h2>SQL</h2>
-      <p>SQL é uma linguagem usada para gerenciar e consultar bancos de dados relacionais, essencial para aplicações que lidam com armazenamento de dados.</p>
-    </section>
-
-    <section class="technology">
-      <h2>C/C++</h2>
-      <p>C e C++ são linguagens de programação de baixo nível usadas para desenvolver software de sistema e aplicações de alto desempenho.</p>
-    </section>
-
-    <section class="technology">
-      <h2>Python</h2>
-      <p>Python é uma linguagem de programação versátil e fácil de aprender, usada em áreas como desenvolvimento web, automação, ciência de dados e aprendizado de máquina.</p>
-    </section>
-
-    <section class="technology">
-      <h2>JavaScript</h2>
-      <p>JavaScript é uma linguagem de programação essencial para a web, permitindo adicionar interatividade e recursos dinâmicos às páginas.</p>
-    </section>
-
-    <section class="technology">
-      <h2>Java</h2>
-      <p>Java é uma linguagem de programação robusta e amplamente usada, ideal para desenvolvimento de aplicações corporativas e sistemas de grande escala.</p>
-    </section>
-
-    <section class="technology">
-      <h2>AWS</h2>
-      <p>AWS (Amazon Web Services) oferece uma ampla gama de serviços de computação em nuvem, facilitando a hospedagem, escalabilidade e gerenciamento de aplicações.</p>
-    </section>
-
-    <section class="technology">
-      <h2>Firebase</h2>
-      <p>Firebase é uma plataforma de desenvolvimento de aplicativos móveis e web do Google, que fornece serviços de back-end, como banco de dados em tempo real e autenticação.</p>
-    </section>
-
-    <section class="technology">
-      <h2>Figma/Canva</h2>
-      <p>Figma e Canva são ferramentas de design gráfico usadas para criar e prototipar interfaces visuais e conteúdos gráficos de forma colaborativa e intuitiva.</p>
-    </section>
-
+    <div class="technology-grid">
+        <section class="technology">
+          <h2>Git</h2>
+          <p class="hidden">Git é um sistema de controle de versão distribuído, essencial para o desenvolvimento colaborativo de software, permitindo o rastreamento de mudanças no código.</p>
+        </section>
+    
+        <section class="technology">
+          <h2>Node.js</h2>
+          <p class="hidden">Node.js é uma plataforma que permite executar JavaScript no lado do servidor, facilitando a construção de aplicações web escaláveis e rápidas.</p>
+        </section>
+    
+        <section class="technology">
+          <h2>React</h2>
+          <p class="hidden">React é uma biblioteca JavaScript para a criação de interfaces de usuário, amplamente utilizada no desenvolvimento front-end para construir interfaces interativas e dinâmicas.</p>
+        </section>
+    
+        <section class="technology">
+          <h2>HTML & CSS</h2>
+          <p class="hidden">HTML é a linguagem de marcação para estruturar o conteúdo da web, enquanto CSS é usado para estilizar e definir o layout visual das páginas.</p>
+        </section>
+    
+        <section class="technology">
+          <h2>SQL</h2>
+          <p class="hidden">SQL é uma linguagem usada para gerenciar e consultar bancos de dados relacionais, essencial para aplicações que lidam com armazenamento de dados.</p>
+        </section>
+    
+        <section class="technology">
+          <h2>C/C++</h2>
+          <p class="hidden">C e C++ são linguagens de programação de baixo nível usadas para desenvolver software de sistema e aplicações de alto desempenho.</p>
+        </section>
+    
+        <section class="technology">
+          <h2>Python</h2>
+          <p class="hidden">Python é uma linguagem de programação versátil e fácil de aprender, usada em áreas como desenvolvimento web, automação, ciência de dados e aprendizado de máquina.</p>
+        </section>
+    
+        <section class="technology">
+          <h2>JavaScript</h2>
+          <p class="hidden">JavaScript é uma linguagem de programação essencial para a web, permitindo adicionar interatividade e recursos dinâmicos às páginas.</p>
+        </section>
+    
+        <section class="technology">
+          <h2>Java</h2>
+          <p class="hidden">Java é uma linguagem de programação robusta e amplamente usada, ideal para desenvolvimento de aplicações corporativas e sistemas de grande escala.</p>
+        </section>
+    
+        <section class="technology">
+          <h2>AWS</h2>
+          <p class="hidden">AWS (Amazon Web Services) oferece uma ampla gama de serviços de computação em nuvem, facilitando a hospedagem, escalabilidade e gerenciamento de aplicações.</p>
+        </section>
+    
+        <section class="technology">
+          <h2>Firebase</h2>
+          <p class="hidden">Firebase é uma plataforma de desenvolvimento de aplicativos móveis e web do Google, que fornece serviços de back-end, como banco de dados em tempo real e autenticação.</p>
+        </section>
+    
+        <section class="technology">
+          <h2>Figma/Canva</h2>
+          <p class="hidden">Figma e Canva são ferramentas de design gráfico usadas para criar e prototipar interfaces visuais e conteúdos gráficos de forma colaborativa e intuitiva.</p>
+        </section>
+      </div>
   </main>
 
   <footer>
-    <p>© 2024 Bianca Avalos | <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> | 
-    <a href="mailto:avalos.bianca@ufms.br">Email</a> | 
-    <a href="https://github.com" target="_blank">GitHub</a></p>
+    <p>© 2024 Bianca Avalos | <a href="https://linkedin.com/in/bianca-avalos" target="_blank">LinkedIn</a> | 
+    <a href="mailto:avalos.bianca@ufms.br" target="_blank">E-mail</a> | 
+    <a href="https://github.com/BRABianca" target="_blank">GitHub</a></p>
   </footer>
+
+  <!-- Estrutura do Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p id="modal-text">Detalhes da tecnologia...</p>
+    </div>
+  </div>
+
+  <!-- JavaScript para controlar o modal -->
+  <script src="/js/main.js"></script>
 </body>
 </html>
