@@ -41,6 +41,7 @@ Este projeto é um portfólio digital desenvolvido para apresentar os projetos, 
 │   └── main.js              # Funcionalidades interativas do site
 └── src/
     └── img/                 # Imagens utilizadas no projeto
+```
 
 ## Tecnologias Utilizadas
 Clone o repositório:
