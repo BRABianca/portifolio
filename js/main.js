@@ -7,7 +7,6 @@ menuToggle.addEventListener('click', () => {
   menu.classList.toggle('show');
 });
 
-// Seleção dos elementos do modal
 const modal = document.getElementById('modal');
 const closeModal = document.querySelector('.close');
 const modalText = document.getElementById('modal-text');
