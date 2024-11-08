@@ -1,0 +1,166 @@
+/* Importa a fonte Roboto do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fundo com imagem para todas as páginas */
+body {
+  background-image: url('/src/img/background.jpg'); /* Substitua pelo caminho da sua imagem */
+  background-size: cover; /* A imagem cobre toda a área da página */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita repetição da imagem */
+  background-attachment: fixed; /* Fixa a imagem enquanto rola a página */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif; /* Define Roboto como fonte principal */
+  color: #fff; /* Ajuste para legibilidade sobre a imagem de fundo */
+}
+
+/* Estilo para o cabeçalho e navegação */
+header {
+  background-color: rgba(51, 51, 51, 0.8); /* Fundo semi-transparente para visibilidade sobre a imagem */
+  color: #fff;
+  padding: 10px 20px;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+  color: #ff6600;
+  font-weight: 700;
+}
+
+/* Estilos para o conteúdo principal */
+main {
+  flex: 1;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* Fundo claro e semi-transparente */
+  color: #333;
+  border-radius: 8px;
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+/* Estilo para os títulos */
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Estilo para parágrafos e listas */
+p, li {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #666;
+}
+
+/* Botões */
+button {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+button:hover {
+  background-color: #cc5200;
+}
+
+/* Estilos do rodapé */
+footer {
+  background-color: rgba(51, 51, 51, 0.8); /* Fundo semi-transparente */
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  font-size: 0.9em;
+}
+
+footer a {
+  color: #ff6600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #cc5200;
+  text-decoration: underline;
+}
+
+/* Formulários */
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 700;
+  color: #333;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background-color: #cc5200;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+  }
+
+  header nav ul li {
+    margin-bottom: 10px;
+  }
+
+  main {
+    padding: 15px;
+  }
+}
