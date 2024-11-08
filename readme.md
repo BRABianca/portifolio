@@ -46,7 +46,7 @@ Este projeto é um portfólio digital desenvolvido para apresentar os projetos, 
 ## Tecnologias Utilizadas
 Clone o repositório:
 
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/BRABianca/portifolio-web
 Abra o projeto: Navegue até a pasta do projeto e abra o arquivo index.html em seu navegador para visualizar o portfólio.
 
 Servir localmente: Se desejar testar localmente com atualizações em tempo real, utilize uma extensão como "Live Server" no Visual Studio Code ou outro servidor local.
