@@ -134,3 +134,13 @@ header nav ul.menu {
     padding: 10px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .message {
+      font-size: 14px;
+  }
+
+  .message button {
+      width: 100%;
+  }
+}
