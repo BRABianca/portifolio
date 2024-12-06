@@ -7,35 +7,7 @@ menuToggle.addEventListener('click', () => {
   menu.classList.toggle('show');
 });
 
-const modal = document.getElementById('modal');
-const closeModal = document.querySelector('.close');
-const modalText = document.getElementById('modal-text');
-
-// Abre o modal com conteúdo específico
-function openModal(content) {
-  modalText.innerText = content;
-  modal.style.display = 'flex';
-}
-
-// Fecha o modal ao clicar no "X" ou fora dele
-closeModal.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
-window.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    modal.style.display = 'none';
-  }
-});
-
-// Abre modal com detalhes da tecnologia ao clicar no título
-document.querySelectorAll('.technology h2').forEach(tech => {
-  tech.addEventListener('click', () => {
-    const content = tech.nextElementSibling.textContent;
-    openModal(content);
-  });
-});
-
-// Seleciona o formulário de contato
+// Função para lidar com o formulário de contato
 const contactForm = document.querySelector("#contact-form");
 
 if (contactForm) {
@@ -66,16 +38,13 @@ if (contactForm) {
     });
 }
 
-
 // Página de listagem de mensagens
 const messagesContainer = document.querySelector("#messages-container");
 const clearAllButton = document.querySelector("#clear-all");
 
 if (messagesContainer) {
-    // Recupera mensagens do Local Storage
     const storedMessages = JSON.parse(localStorage.getItem("messages")) || [];
 
-    // Função para renderizar as mensagens
     function renderMessages() {
         messagesContainer.innerHTML = ""; // Limpa o container
 
@@ -108,7 +77,6 @@ if (messagesContainer) {
         });
     }
 
-    // Evento para remover todas as mensagens
     clearAllButton.addEventListener("click", function () {
         localStorage.removeItem("messages"); // Remove do Local Storage
         renderMessages(); // Atualiza a lista
