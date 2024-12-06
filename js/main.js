@@ -34,3 +34,34 @@ document.querySelectorAll('.technology h2').forEach(tech => {
     openModal(content);
   });
 });
+
+// Seleciona o formulário de contato
+const contactForm = document.querySelector("#contact-form");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita o envio padrão do formulário
+
+        // Captura os dados do formulário
+        const name = document.querySelector("#name").value;
+        const email = document.querySelector("#email").value;
+        const message = document.querySelector("#message").value;
+
+        // Cria o objeto mensagem
+        const newMessage = { name, email, message, date: new Date().toLocaleString() };
+
+        // Recupera mensagens do Local Storage ou inicializa o array
+        const storedMessages = JSON.parse(localStorage.getItem("messages")) || [];
+
+        // Adiciona a nova mensagem ao array
+        storedMessages.push(newMessage);
+
+        // Salva o array atualizado no Local Storage
+        localStorage.setItem("messages", JSON.stringify(storedMessages));
+
+        // Limpa os campos do formulário
+        contactForm.reset();
+
+        alert("Mensagem enviada com sucesso!");
+    });
+}

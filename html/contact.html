@@ -27,18 +27,13 @@
   <main>
     <h1>Contato</h1>
     <p>Entre em contato comigo pelos links abaixo ou pelo formulário.</p>
-    <form>
-      <label for="name">Nome:</label>
-      <input type="text" id="name" name="name">
-      
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email">
-      
-      <label for="message">Mensagem:</label>
-      <textarea id="message" name="message"></textarea>
-      
+    <form id="contact-form">
+      <input type="text" id="name" placeholder="Seu Nome" required />
+      <input type="email" id="email" placeholder="Seu Email" required />
+      <textarea id="message" placeholder="Sua Mensagem" required></textarea>
       <button type="submit">Enviar</button>
-    </form>
+  </form>
+  
   </main>
 
   <footer>
