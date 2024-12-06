@@ -65,3 +65,54 @@ if (contactForm) {
         alert("Mensagem enviada com sucesso!");
     });
 }
+
+
+// Página de listagem de mensagens
+const messagesContainer = document.querySelector("#messages-container");
+const clearAllButton = document.querySelector("#clear-all");
+
+if (messagesContainer) {
+    // Recupera mensagens do Local Storage
+    const storedMessages = JSON.parse(localStorage.getItem("messages")) || [];
+
+    // Função para renderizar as mensagens
+    function renderMessages() {
+        messagesContainer.innerHTML = ""; // Limpa o container
+
+        if (storedMessages.length === 0) {
+            messagesContainer.innerHTML = "<p>Nenhuma mensagem recebida.</p>";
+            return;
+        }
+
+        storedMessages.forEach((msg, index) => {
+            const messageElement = document.createElement("div");
+            messageElement.classList.add("message");
+            messageElement.innerHTML = `
+                <p><strong>Nome:</strong> ${msg.name}</p>
+                <p><strong>Email:</strong> ${msg.email}</p>
+                <p><strong>Mensagem:</strong> ${msg.message}</p>
+                <p><em>${msg.date}</em></p>
+                <button class="delete-message" data-index="${index}">Remover</button>
+            `;
+            messagesContainer.appendChild(messageElement);
+        });
+
+        // Adiciona evento para deletar mensagens individuais
+        document.querySelectorAll(".delete-message").forEach(button => {
+            button.addEventListener("click", function () {
+                const index = this.getAttribute("data-index");
+                storedMessages.splice(index, 1); // Remove a mensagem do array
+                localStorage.setItem("messages", JSON.stringify(storedMessages)); // Atualiza Local Storage
+                renderMessages(); // Atualiza a lista
+            });
+        });
+    }
+
+    // Evento para remover todas as mensagens
+    clearAllButton.addEventListener("click", function () {
+        localStorage.removeItem("messages"); // Remove do Local Storage
+        renderMessages(); // Atualiza a lista
+    });
+
+    renderMessages(); // Renderiza as mensagens na página
+}
