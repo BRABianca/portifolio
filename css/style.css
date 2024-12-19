@@ -196,15 +196,6 @@ form textarea {
   padding: 10px;
 }
 
-.card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  padding: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
 .card img {
   max-width: 80px;
@@ -215,12 +206,9 @@ form textarea {
   font-size: 0.9rem;
   font-weight: 500;
   color: #333;
+  margin-bottom: 15px;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
 
 /* Estilo para os cartões do portfólio */
 .portfolio-cards {
@@ -231,15 +219,7 @@ form textarea {
   padding: 10px;
 }
 
-.card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+
 
 .card h2 a {
   color: var(--primary-color);
@@ -251,11 +231,6 @@ form textarea {
   text-decoration: underline;
 }
 
-.card p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 15px 0;
-}
 
 .card a {
   display: inline-block;
@@ -293,7 +268,7 @@ form textarea {
   overflow: hidden;
   position: relative;
   text-align: center;
-  padding: 15px;
+  padding: 20px;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -315,11 +290,28 @@ form textarea {
   display: block;
 }
 
-/* Estilo ao passar o mouse */
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+/* Contato */
+.whatsapp-button {
+  margin-top: 20px;
+  text-align: center; /* Centraliza o conteúdo */
 }
+
+.whatsapp-button a button {
+  background-color: #25D366; /* Cor do WhatsApp */
+  color: #fff;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-button a button:hover {
+  background-color: #1DA851; /* Tom mais escuro no hover */
+}
+
+
 
 /* Responsividade: Ajustar para 2 colunas em telas menores */
 @media (max-width: 768px) {
@@ -334,8 +326,6 @@ form textarea {
     grid-template-columns: 1fr; /* Uma coluna */
   }
 }
-
-
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
