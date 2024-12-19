@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tecnologia - Bianca Avalos</title>
+  <title>Tecnologias - Bianca Avalos</title>
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 </head>
@@ -13,81 +13,258 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">Sobre</a></li>
-        <li><a href="education.html">Formacao</a></li>
+        <li><a href="education.html">Formação</a></li>
         <li><a href="experience.html">Experiência</a></li>
         <li><a href="portfolio.html">Portfólio</a></li>
+        <li><a href="technology.html" class="active">Tecnologias</a></li>
         <li><a href="contact.html">Contato</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h1>Detalhes da Tecnologia</h1>
-    <section>
-      <h2>HTML5</h2>
-      <p><strong>Definição:</strong> HTML5 é a quinta versão do HTML, usada para estruturar e apresentar conteúdo na web.</p>
-      <p><strong>Site Oficial:</strong> <a href="https://html.spec.whatwg.org/multipage/" target="_blank">HTML5 Spec</a></p>
+    <h1>Tecnologias</h1>
+    <div class="technology-cards">
+      <!-- HTML5 -->
+      <div class="card" onclick="toggleCardInfo(this)">
+        <h2>HTML5</h2>
+        <div class="card-info">
+          <p><strong>Definição:</strong> HTML5 é a quinta versão do HTML, usada para estruturar e apresentar conteúdo na web.</p>
+          <h3>Prós</h3>
+          <ul>
+            <li>Compatibilidade com dispositivos móveis.</li>
+            <li>Suporte para multimídia sem plugins adicionais.</li>
+            <li>Melhor semântica para SEO.</li>
+          </ul>
+          <h3>Contras</h3>
+          <ul>
+            <li>Inconsistências de suporte em navegadores mais antigos.</li>
+            <li>Dependência de novos padrões ainda não completamente adotados.</li>
+          </ul>
+        </div>
+      </div>
 
-      <h3>Prós</h3>
-      <ul>
-        <li>Compatibilidade com dispositivos móveis.</li>
-        <li>Suporte para multimídia sem plugins adicionais.</li>
-        <li>Melhor semântica para SEO.</li>
-      </ul>
+      <!-- CSS3 -->
+      <div class="card" onclick="toggleCardInfo(this)">
+        <h2>CSS3</h2>
+        <div class="card-info">
+          <p><strong>Definição:</strong> CSS3 é a última versão do Cascading Style Sheets, usada para estilizar páginas da web.</p>
+          <h3>Prós</h3>
+          <ul>
+            <li>Animações e transições visuais.</li>
+            <li>Layouts responsivos com Flexbox e Grid.</li>
+            <li>Maior controle sobre a aparência das páginas.</li>
+          </ul>
+          <h3>Contras</h3>
+          <ul>
+            <li>Diferenças de renderização entre navegadores.</li>
+            <li>Curva de aprendizado para propriedades avançadas.</li>
+          </ul>
+        </div>
+      </div>
 
-      <h3>Contras</h3>
-      <ul>
-        <li>Inconsistências de suporte em navegadores mais antigos.</li>
-        <li>Dependência de novos padrões ainda não completamente adotados.</li>
-        <li>Complexidade para desenvolvedores inexperientes.</li>
-      </ul>
+      <!-- JavaScript -->
+      <div class="card" onclick="toggleCardInfo(this)">
+        <h2>JavaScript</h2>
+        <div class="card-info">
+          <p><strong>Definição:</strong> JavaScript é uma linguagem de programação usada para criar conteúdo dinâmico na web.</p>
+          <h3>Prós</h3>
+          <ul>
+            <li>Alta compatibilidade com navegadores.</li>
+            <li>Possibilita páginas dinâmicas e interativas.</li>
+            <li>Grande comunidade e suporte.</li>
+          </ul>
+          <h3>Contras</h3>
+          <ul>
+            <li>Problemas de segurança em código mal estruturado.</li>
+            <li>Dependência de suporte de diferentes navegadores.</li>
+          </ul>
+        </div>
+      </div>
 
-      <h3>Projetos que Usam HTML5</h3>
-      <ul>
-        <li>Netflix</li>
-        <li>Google Drive</li>
-        <li>Gmail</li>
-        <li>LinkedIn</li>
-        <li>WhatsApp Web</li>
-        <li>Facebook</li>
-      </ul>
-    </section>
+      <!-- Python -->
+      <div class="card" onclick="toggleCardInfo(this)">
+        <h2>Python</h2>
+        <div class="card-info">
+          <p><strong>Definição:</strong> Python é uma linguagem de programação versátil, amplamente utilizada em ciência de dados, desenvolvimento web e automação.</p>
+          <h3>Prós</h3>
+          <ul>
+            <li>Sintaxe simples e legível.</li>
+            <li>Grande quantidade de bibliotecas.</li>
+            <li>Popularidade em diversas áreas.</li>
+          </ul>
+          <h3>Contras</h3>
+          <ul>
+            <li>Menor desempenho comparado a linguagens compiladas.</li>
+            <li>Não ideal para aplicativos móveis.</li>
+          </ul>
+        </div>
+      </div>
 
-    <!-- Exemplo de outra tecnologia -->
-    <section>
-      <h2>CSS3</h2>
-      <p><strong>Definição:</strong> CSS3 é a última versão do Cascading Style Sheets, usada para estilizar páginas da web.</p>
-      <p><strong>Site Oficial:</strong> <a href="https://www.w3.org/Style/CSS/" target="_blank">W3C CSS</a></p>
+<!-- Node.js -->
+      <div class="card" onclick="toggleCardInfo(this)">
+        <h2>Node.js</h2>
+        <div class="card-info">
+          <p><strong>Definição:</strong> Node.js é um ambiente de execução JavaScript no lado do servidor.</p>
+          <h3>Prós</h3>
+          <ul>
+            <li>Alta escalabilidade.</li>
+            <li>Velocidade e eficiência com V8 Engine.</li>
+            <li>Grande comunidade e biblioteca NPM.</li>
+          </ul>
+          <h3>Contras</h3>
+          <ul>
+            <li>Modelo de programação assíncrono pode ser desafiador.</li>
+            <li>Menos eficaz para aplicativos computacionalmente intensivos.</li>
+          </ul>
+        </div>
+      </div>
 
-      <h3>Prós</h3>
-      <ul>
-        <li>Animações e transições visuais.</li>
-        <li>Layouts responsivos com Flexbox e Grid.</li>
-        <li>Maior controle sobre a aparência das páginas.</li>
-      </ul>
+       <!-- Node.js -->
+      <div class="card" onclick="toggleCardInfo(this)">
+        <h2>Node.js</h2>
+        <div class="card-info">
+          <p><strong>Definição:</strong> Node.js é um ambiente de execução JavaScript no lado do servidor.</p>
+          <h3>Prós</h3>
+          <ul>
+            <li>Alta escalabilidade.</li>
+            <li>Velocidade e eficiência com V8 Engine.</li>
+            <li>Grande comunidade e biblioteca NPM.</li>
+          </ul>
+          <h3>Contras</h3>
+          <ul>
+            <li>Modelo de programação assíncrono pode ser desafiador.</li>
+            <li>Menos eficaz para aplicativos computacionalmente intensivos.</li>
+          </ul>
+        </div>
+      </div>
 
-      <h3>Contras</h3>
-      <ul>
-        <li>Diferenças de renderização entre navegadores.</li>
-        <li>Curva de aprendizado para propriedades avançadas.</li>
-        <li>Manutenção complexa em projetos grandes.</li>
-      </ul>
+       <!-- C -->
+       <div class="card" onclick="toggleCardInfo(this)">
+        <h2>C</h2>
+        <div class="card-info">
+          <p><strong>Definição:</strong> C é uma linguagem de programação de baixo nível, eficiente e amplamente utilizada para sistemas.</p>
+          <h3>Prós</h3>
+          <ul>
+            <li>Extremamente eficiente e rápido.</li>
+            <li>Controla diretamente o hardware.</li>
+            <li>Base para muitas outras linguagens.</li>
+          </ul>
+          <h3>Contras</h3>
+          <ul>
+            <li>Curva de aprendizado íngreme.</li>
+            <li>Propenso a erros de memória.</li>
+          </ul>
+        </div>
+      </div>
 
-      <h3>Projetos que Usam CSS3</h3>
-      <ul>
-        <li>Instagram</li>
-        <li>Spotify</li>
-        <li>Dropbox</li>
-        <li>Pinterest</li>
-        <li>Slack</li>
-        <li>Reddit</li>
-      </ul>
-    </section>
+      <!-- SQL -->
+      <div class="card" onclick="toggleCardInfo(this)">
+        <h2>SQL</h2>
+        <div class="card-info">
+          <p><strong>Definição:</strong> SQL (Structured Query Language) é usado para gerenciar e consultar bancos de dados relacionais.</p>
+          <h3>Prós</h3>
+          <ul>
+            <li>Facilidade de uso para manipulação de dados.</li>
+            <li>Altamente padronizado e compatível com vários bancos de dados.</li>
+          </ul>
+          <h3>Contras</h3>
+          <ul>
+            <li>Menos eficaz com bancos de dados não relacionais.</li>
+            <li>Problemas de desempenho em consultas mal escritas.</li>
+          </ul>
+        </div>
+      </div>
 
+       <!-- Java -->
+       <div class="card" onclick="toggleCardInfo(this)">
+        <h2>Java</h2>
+        <div class="card-info">
+          <p><strong>Definição:</strong> Java é uma linguagem de programação orientada a objetos e independente de plataforma.</p>
+          <h3>Prós</h3>
+          <ul>
+            <li>Altamente portátil com JVM.</li>
+            <li>Amplo uso em aplicativos corporativos.</li>
+            <li>Grande comunidade de desenvolvedores.</li>
+          </ul>
+          <h3>Contras</h3>
+          <ul>
+            <li>Sintaxe mais verbosa.</li>
+            <li>Desempenho pode ser inferior a linguagens compiladas.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- React -->
+      <div class="card" onclick="toggleCardInfo(this)">
+        <h2>React</h2>
+        <div class="card-info">
+          <p><strong>Definição:</strong> React é uma biblioteca JavaScript para construir interfaces de usuário.</p>
+          <h3>Prós</h3>
+          <ul>
+            <li>Componentes reutilizáveis.</li>
+            <li>Desempenho melhorado com Virtual DOM.</li>
+            <li>Grande suporte da comunidade.</li>
+          </ul>
+          <h3>Contras</h3>
+          <ul>
+            <li>Foco apenas na camada de visualização.</li>
+            <li>Curva de aprendizado para novos desenvolvedores.</li>
+          </ul>
+        </div>
+      </div>
+
+       <!-- TypeScript -->
+       <div class="card" onclick="toggleCardInfo(this)">
+        <h2>TypeScript</h2>
+        <div class="card-info">
+          <p><strong>Definição:</strong> TypeScript é um superconjunto do JavaScript que adiciona tipagem estática.</p>
+          <h3>Prós</h3>
+          <ul>
+            <li>Reduz erros com tipagem estática.</li>
+            <li>Compatível com todo o código JavaScript.</li>
+            <li>Facilita a manutenção em projetos grandes.</li>
+          </ul>
+          <h3>Contras</h3>
+          <ul>
+            <li>Requer aprendizado adicional para quem já conhece JavaScript.</li>
+            <li>Configuração inicial pode ser complexa.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Angular -->
+      <div class="card" onclick="toggleCardInfo(this)">
+        <h2>Angular</h2>
+        <div class="card-info">
+          <p><strong>Definição:</strong> Angular é um framework para construir aplicativos web robustos e dinâmicos.</p>
+          <h3>Prós</h3>
+          <ul>
+            <li>Estrutura completa para desenvolvimento front-end.</li>
+            <li>Grande comunidade e suporte corporativo (Google).</li>
+          </ul>
+          <h3>Contras</h3>
+          <ul>
+            <li>Curva de aprendizado íngreme.</li>
+            <li>Alto consumo de recursos.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer>
     <p>© 2024 Bianca Avalos | <a href="linkedin.com\in\bianca-avalos" target="_blank">LinkedIn</a> | <a href="mailto:avalos.bianca@ufms.br" target="_blank">E-mail</a> | <a href="github.com\BRABianca" target="_blank">GitHub</a></p>
   </footer>
+
+  <script>
+    function toggleCardInfo(card) {
+      // Remove a classe "active" de todos os cartões
+      document.querySelectorAll('.card').forEach(c => c.classList.remove('active'));
+      
+      // Adiciona ou remove a classe "active" no cartão clicado
+      card.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>

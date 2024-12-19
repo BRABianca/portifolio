@@ -1,21 +1,29 @@
 function includeHTML() {
-    var z, i, elmnt, file, xhttp;
-    z = document.getElementsByTagName("*");
-    for (i = 0; i < z.length; i++) {
-        elmnt = z[i];
-        file = elmnt.getAttribute("w3-include-html");
+    const elements = document.getElementsByTagName("*");  // Usando const, pois elements não será reatribuído.
+    
+    // Usando for-of para iterar sobre os elementos
+    for (const elmnt of elements) {  // Usando for-of para iteração simplificada
+        const file = elmnt.getAttribute("w3-include-html");  // Usando const para a constante file
+        
         if (file) {
-            xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    elmnt.innerHTML = this.responseText;
+            // Usando fetch em vez de XMLHttpRequest
+            fetch(file)
+                .then(response => {
+                    if (response.ok) {
+                        return response.text();
+                    } else {
+                        throw new Error('Falha ao carregar o arquivo: ' + file);
+                    }
+                })
+                .then(data => {
+                    elmnt.innerHTML = data;
                     elmnt.removeAttribute("w3-include-html");
-                    includeHTML();
-                }
-            };
-            xhttp.open("GET", file, true);
-            xhttp.send();
-            return;
+                    // A recursão foi removida. Agora o código é executado uma vez por elemento
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+            return;  // Retorna após a primeira requisição
         }
     }
 }
